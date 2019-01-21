@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XMR001"
+             x:Class="XMR001.Page_Desktop">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="데스크탑 용 UI"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <local:CustomView WidthRequest="300" HeightRequest="300" BackgroundColor="Yellow"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

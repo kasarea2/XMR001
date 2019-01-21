@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XMR001"
+             x:Class="XMR001.ScoreBoard" >
+    
+    <ContentPage.Content >
+        <RelativeLayout >
+            <!--local:ScoreBoardRenderer WidthRequest="300" HeightRequest="300" BackgroundColor="Yellow"/-->
+            <!-- Centered and 1/3 width and height of parent -->
+            <BoxView x:Name="RedTeam"
+             Color="Black" 
+             RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=RelativeToParent,
+                                        Constant=0}"
+             RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToParent,
+                                        Constant=0}"
+             RelativeLayout.WidthConstraint=
+                 "{ConstraintExpression Type=RelativeToParent,
+                                        Property=Width,
+                                        Factor=1}"
+             RelativeLayout.HeightConstraint=
+                 "{ConstraintExpression Type=RelativeToParent,
+                                        Property=Height,
+                                        Factor=0.45}"  />
+            <BoxView x:Name="BlueTeam"
+             Color="Black"
+             RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=RelativeToParent,
+                                        Property=Width,
+                                        Factor=0}"
+             RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToParent,
+                                        Property=Height,
+                                        Factor=0.55}"
+             RelativeLayout.WidthConstraint=
+                 "{ConstraintExpression Type=RelativeToParent,
+                                        Property=Width,
+                                        Factor=1}"
+             RelativeLayout.HeightConstraint=
+                 "{ConstraintExpression Type=RelativeToParent,
+                                        Property=Height,
+                                        Factor=0.45}"  />
+            <Label Text="0"
+                Scale="6"
+                FontAttributes="Bold"
+                TextColor="White"
+                Rotation="90"
+                RelativeLayout.XConstraint=
+                "{ConstraintExpression Type=RelativeToView,
+                                            ElementName=RedTeam,
+                                            Property=X}"
+                RelativeLayout.YConstraint=
+                        "{ConstraintExpression Type=RelativeToView,
+                                            ElementName=RedTeam,
+                                            Property=Y}"
+                RelativeLayout.WidthConstraint=
+                        "{ConstraintExpression Type=RelativeToView,
+                                            ElementName=RedTeam,
+                                            Property=Width}"
+                RelativeLayout.HeightConstraint=
+                        "{ConstraintExpression Type=RelativeToView,
+                                            ElementName=RedTeam,
+                                            Property=Height}"  
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+            />
+            <Label Text="0" 
+               Scale="6"
+               FontAttributes="Bold"
+               TextColor="White"
+               Rotation="90"
+               RelativeLayout.XConstraint=
+                     "{ConstraintExpression Type=RelativeToView,
+                                            ElementName=BlueTeam,
+                                            Property=X}"
+               RelativeLayout.YConstraint=
+                     "{ConstraintExpression Type=RelativeToView,
+                                            ElementName=BlueTeam,
+                                            Property=Y}"
+               RelativeLayout.WidthConstraint=
+                     "{ConstraintExpression Type=RelativeToView,
+                                            ElementName=BlueTeam,
+                                            Property=Width}"
+               RelativeLayout.HeightConstraint=
+                     "{ConstraintExpression Type=RelativeToView,
+                                            ElementName=BlueTeam,
+                                            Property=Height}"  
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" 
+               />
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

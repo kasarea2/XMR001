@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XMR001"
+             x:Class="XMR001.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="안드로이드, 아이폰용 UI" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <!--local:CustomView WidthRequest="300" HeightRequest="300" BackgroundColor="Yellow"/-->
+        <Button Text="count : 0" Clicked="Button_Clicked" />
+    </StackLayout>
+
+</ContentPage>
